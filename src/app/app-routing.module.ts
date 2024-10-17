@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DispositivoComponent } from './components/dispositivo/dispositivo.component';
 
 const routes: Routes = [
-  {path: '', component: DispositivoComponent}
+  {path: '', redirectTo: 'Dispositivo', component: DispositivoComponent}
 ];
 
 @NgModule({
