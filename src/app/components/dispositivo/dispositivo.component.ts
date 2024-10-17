@@ -11,8 +11,6 @@ export class DispositivoComponent {
   currentValue = '';      // El número actual
   previousValue = '';     // El número previo antes de seleccionar una operación
   operation = '';         // Operación actual (+, -, *, /)
-
-
   isDarkMode = false;
 
   constructor() { }
@@ -22,7 +20,6 @@ export class DispositivoComponent {
     this.displayValue += number;
     this.currentValue += number;
   }
-
   // Asignar operación
   setOperation(operation: string) {
     if (this.currentValue === '') return; // No permitir operaciones sin un valor
@@ -31,25 +28,17 @@ export class DispositivoComponent {
     this.currentValue = '';
     this.displayValue += ` ${operation} `;
   }
-
-  // Limpiar la pantalla
   clear() {
     this.displayValue = '';
     this.currentValue = '';
     this.previousValue = '';
     this.operation = '';
   }
-
-
-
-  // Realizar la operación
   compute() {
     let result: number;
     const prev = parseFloat(this.previousValue);
     const current = parseFloat(this.currentValue);
-
     if (isNaN(prev) || isNaN(current)) return;
-
     switch (this.operation) {
       case '+':
         result = prev + current;
@@ -66,12 +55,9 @@ export class DispositivoComponent {
       default:
         return;
     }
-
     this.displayValue = result.toString();
     this.currentValue = result.toString();
     this.operation = '';
     this.previousValue = '';
-  }
-
- 
+  } 
 }
