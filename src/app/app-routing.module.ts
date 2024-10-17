@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { DispositivoComponent } from './components/dispositivo/dispositivo.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'Dispositivo', component: DispositivoComponent}
+  { path: '', redirectTo: '/dispositivo', pathMatch: 'full' },
+  { path: 'dispositivo', component: DispositivoComponent }
 ];
 
 @NgModule({
