@@ -1,0 +1,53 @@
+.container {
+    display: flex; //para poder usar las dos siguientes caracteristicas
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+
+    .calculator {
+        display: inline-block;
+        box-shadow: 0px 0px 3px rgb(255, 251, 251, 0.8);
+        padding: 25px;
+        border-radius: 5px;
+        width: 250px;
+        margin-right: 20px;
+        input {
+            width: 97%;
+            background-color: rgb(100, 106, 118);
+            height: 50px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: right;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+
+            button {
+                width: 100%;
+                padding: 15px;
+                font-size: 18px;
+                box-shadow: 0px 0px 1px rgb(255, 251, 251, 0.1);
+                border-radius: 5px;
+                cursor: pointer;
+                color: white;
+            }
+            #igual {
+                width: 215%;
+            }
+            #colors {
+                background-color: rgb(201, 201, 201);
+                box-shadow: 0px 0px 1px rgb(255, 251, 251, 0.1);
+                transition: 4s;
+            }
+            #colors:hover {
+                background-color: #26292e;
+
+                box-shadow: 0px 0px 1px rgb(255, 251, 251, 0.1);
+            }
+        }
+    }
+
+
+}
